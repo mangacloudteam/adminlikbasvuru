@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MangaCloud Adminlik Başvurusu</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#0f0f0f;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:20px;
+  animation:fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+.hero{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.hero h1{
+  font-size:2rem;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+.form-card{
+  width:100%;
+  max-width:600px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(15px);
+  border-radius:16px;
+  padding:25px;
+  box-shadow:0 0 25px rgba(124,58,237,0.2);
+  margin-bottom:30px;
+}
+
+input, textarea, select{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:8px;
+  border:none;
+  background:rgba(255,255,255,0.1);
+  color:white;
+  outline:none;
+}
+
+input:focus, textarea:focus, select:focus{
+  border:1px solid #7c3aed;
+}
+
+textarea {
+  min-height:80px;
+  resize: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+  background:linear-gradient(90deg,#7c3aed,#9333ea);
+  color:white;
+  transition:0.3s;
+}
+
+footer{
+  text-align:center;
+  font-size:0.8rem;
+  opacity:0.7;
+}
+
+@media(min-width:768px){
+  .hero h1{
+    font-size:2.5rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>MangaCloud Adminlik Başvuru</h1>
+</section>
+
+<section class="form-card">
+<form action="https://formsubmit.co/mangacloudofficial@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="MangaCloud Adminlik Başvuru">
+<input type="hidden" name="_template" value="table">
+
+
+<input type="text" name="Full Name" placeholder="Adınız" required>
+<input type="text" name="Instagram or Discord Username" placeholder="@instagram" required>
+<input type="email" name="Email" placeholder="E-posta Adresi" required>
+
+
+<label>Daha önce adminlik veya moderatörlük yaptınız mı? (Evet/Hayır)</label>
+<input type="text" name="Admin Experience" placeholder="Cevap" required>
+
+<label>Manga, anime veya benzeri topluluklarda deneyiminiz var mı?</label>
+<textarea name="Community Experience" placeholder="Deneyiminizi yazın"></textarea>
+
+<label>Forum / web sitesi yönetiminde teknik bilginiz var mı? (rol dağıtma, mesaj silme, spam engelleme vb.)</label>
+<textarea name="Technical Skills" placeholder="Bilgilerinizi yazın"></textarea>
+
+
+<label>Neden MangaCloud’da admin olmak istiyorsunuz?</label>
+<textarea name="Motivation" placeholder="Cevabınızı yazın" required></textarea>
+
+<label>Kullanıcılarla iyi iletişim kurabilmek için ne gibi yöntemleriniz var?</label>
+<textarea name="Communication Methods" placeholder="Cevabınızı yazın"></textarea>
+
+
+<label>Bir kullanıcı spam mesaj atıyor, ne yaparsınız?</label>
+<textarea name="Spam Handling" placeholder="Cevabınızı yazın" required></textarea>
+
+<label>Başka bir adminle anlaşmazlık yaşarsanız nasıl çözersiniz?</label>
+<textarea name="Admin Conflict" placeholder="Cevabınızı yazın"></textarea>
+
+<label>Kullanıcıdan gelen şikayeti nasıl değerlendirirsiniz?</label>
+<textarea name="User Complaint Handling" placeholder="Cevabınızı yazın"></textarea>
+
+<label>Hesap bilgilerini veya özel verileri paylaşmama konusunda ne kadar dikkatlisiniz?</label>
+<textarea name="Data Safety" placeholder="Cevabınızı yazın" required></textarea>
+
+<label>Platform kurallarını ihlal eden bir durumu görürseniz nasıl tepki verirsiniz?</label>
+<textarea name="Rules Violation Handling" placeholder="Cevabınızı yazın" required></textarea>
+
+<button type="submit">Adminlik Başvurusu yap</button>
+</form>
+</section>
+
+<footer>
+© 2026 MangaCloud. Tüm hakları saklıdır.<br>
+<a href="https://instagram.com/mangacloudresmi" target="_blank">Instagram</a> |
+<a href="https://tiktok.com/@mangacloudresmi" target="_blank">Tiktok</a>
+</footer>
+
+<script>
+const textareas = document.querySelectorAll('textarea');
+textareas.forEach(textarea => {
+  textarea.addEventListener('input', () => {
+    textarea.style.height = 'auto';
+    textarea.style.height = textarea.scrollHeight + 'px';
+  });
+});
+</script>
+
+</body>
+</html>
